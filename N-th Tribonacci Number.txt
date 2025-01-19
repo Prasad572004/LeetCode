@@ -1,0 +1,23 @@
+class Solution {
+    public int tribonacci(int n) {
+        if(n == 0)
+        {
+            return 0;
+        }else if(n == 1 || n == 2)
+        {
+            return 1;
+        }
+        int First=0;
+        int Second=1;
+        int Third=1;
+        for(int i=1;i<=n;i++)
+        {
+            int Fourth = First + Second + Third;
+
+            First = Second;
+            Second = Third;
+            Third = Fourth;
+        }
+        return First;
+    }
+}
